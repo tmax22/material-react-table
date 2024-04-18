@@ -1,5 +1,5 @@
 import Paper, { type PaperProps } from '@mui/material/Paper';
-import { useTheme } from '@mui/material'
+import { useTheme } from '@mui/material';
 import { MRT_TableContainer } from './MRT_TableContainer';
 import { type MRT_RowData, type MRT_TableInstance } from '../../types';
 import { parseFromValuesOrFunc } from '../../utils/utils';
@@ -61,7 +61,7 @@ export const MRT_TablePaper = <TData extends MRT_RowData>({
               right: 0,
               top: 0,
               width: '100dvw',
-              zIndex: theme.zIndex.modal + 1,
+              zIndex: theme.zIndex.modal,
             }
           : {}),
         ...paperProps?.style,
