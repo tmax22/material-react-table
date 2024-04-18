@@ -31,7 +31,7 @@ const preview: Preview = {
   },
   decorators: [
     (Story, context) => {
-      const [isDark, setDark] = useState(false);
+      const [isDark, setDark] = useState(true);
       const theme = isDark ? darkTheme : lightTheme;
 
       useEffect(() => {

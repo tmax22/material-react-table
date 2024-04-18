@@ -11,15 +11,15 @@
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
-    "@emotion/styled": "^11.11.0",
-    "@mui/icons-material": "^5.15.14",
-    "@mui/material": "^5.15.14",
-    "@mui/x-date-pickers": "^7.0.0",
+    "@emotion/styled": "^11.11.5",
+    "@mui/icons-material": "^5.15.15",
+    "@mui/material": "^5.15.15",
+    "@mui/x-date-pickers": "^7.2.0",
     "@remix-run/css-bundle": "^2.8.1",
     "@remix-run/node": "^2.8.1",
     "@remix-run/react": "^2.8.1",
     "@remix-run/serve": "^2.8.1",
-    "isbot": "^5.1.2",
+    "isbot": "^5.1.4",
     "material-react-table": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -27,10 +27,10 @@
   "devDependencies": {
     "@remix-run/dev": "^2.8.1",
     "@remix-run/eslint-config": "^2.8.1",
-    "@types/react": "^18.2.71",
-    "@types/react-dom": "^18.2.22",
-    "eslint": "^8.57.0",
-    "typescript": "^5.4.3"
+    "@types/react": "^18.2.79",
+    "@types/react-dom": "^18.2.25",
+    "eslint": "^9.0.0",
+    "typescript": "^5.4.5"
   },
   "engines": {
     "node": ">=18.0.0"
