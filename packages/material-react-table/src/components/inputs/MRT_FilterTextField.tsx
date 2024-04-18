@@ -16,18 +16,9 @@ import MenuItem from '@mui/material/MenuItem';
 import TextField, { type TextFieldProps } from '@mui/material/TextField';
 import Tooltip from '@mui/material/Tooltip';
 import { debounce } from '@mui/material/utils';
-import {
-  DatePicker,
-  type DatePickerProps,
-} from '@mui/x-date-pickers/DatePicker';
-import {
-  DateTimePicker,
-  type DateTimePickerProps,
-} from '@mui/x-date-pickers/DateTimePicker';
-import {
-  TimePicker,
-  type TimePickerProps,
-} from '@mui/x-date-pickers/TimePicker';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
+import { TimePicker } from '@mui/x-date-pickers/TimePicker';
 import {
   type DropdownOption,
   type MRT_Header,
@@ -75,7 +66,7 @@ export const MRT_FilterTextField = <TData extends MRT_RowData>({
 
   const args = { column, rangeFilterIndex, table };
 
-  const textFieldProps: TextFieldProps = {
+  const textFieldProps = {
     ...parseFromValuesOrFunc(muiFilterTextFieldProps, args),
     ...parseFromValuesOrFunc(columnDef.muiFilterTextFieldProps, args),
     ...rest,
@@ -86,20 +77,20 @@ export const MRT_FilterTextField = <TData extends MRT_RowData>({
     ...parseFromValuesOrFunc(columnDef.muiFilterAutocompleteProps, args),
   };
 
-  const datePickerProps: DatePickerProps<any> = {
+  const datePickerProps = {
     ...parseFromValuesOrFunc(muiFilterDatePickerProps, args),
     ...parseFromValuesOrFunc(columnDef.muiFilterDatePickerProps, args),
-  };
+  } as any;
 
-  const dateTimePickerProps: DateTimePickerProps<any> = {
+  const dateTimePickerProps = {
     ...parseFromValuesOrFunc(muiFilterDateTimePickerProps, args),
     ...parseFromValuesOrFunc(columnDef.muiFilterDateTimePickerProps, args),
-  };
+  } as any;
 
-  const timePickerProps: TimePickerProps<any> = {
+  const timePickerProps = {
     ...parseFromValuesOrFunc(muiFilterTimePickerProps, args),
     ...parseFromValuesOrFunc(columnDef.muiFilterTimePickerProps, args),
-  };
+  } as any;
 
   const {
     allowedColumnFilterOptions,

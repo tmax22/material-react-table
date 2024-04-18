@@ -13,6 +13,16 @@ export type TableOption = {
 
 export const tableOptions: TableOption[] = [
   {
+    tableOption: '_features',
+    defaultValue: '',
+    description: `An array of extra features that you can add to the table instance.`,
+    link: 'https://tanstack.com/table/latest/docs/guide/custom-features',
+    linkText: 'TanStack Table Custom Features Docs',
+    required: false,
+    source: 'TanStack Table',
+    type: 'Array<TableFeature>',
+  },
+  {
     tableOption: 'aggregationFns',
     defaultValue: '',
     description: `This option allows you to define custom aggregation functions that can be referenced in a column's aggregationFn option by their key`,

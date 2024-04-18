@@ -608,7 +608,7 @@ export const columnOptions: ColumnOption[] = [
     linkText: '',
     source: 'TanStack Table',
     required: false,
-    type: 'false | 1 | -1',
+    type: "'first' | 'last' | false | 1 | -1",
   },
   {
     columnOption: 'renderCellActionMenuItems',

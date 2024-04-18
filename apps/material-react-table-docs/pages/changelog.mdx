@@ -9,6 +9,16 @@ import Head from 'next/head';
 
 > Note: As of v2.12.0, the React and ReactDom peer dependencies have been moved back down to React v17 in order to help more people upgrade to MRT v2 without having to upgrade to React v18.
 
+### Version 2.13.0 - 2024-04-18
+
+- Upgraded to TanStack Table v8.16.0
+  - New `sortUndefined` `"first"` and `"last"` options to allow forcing undefined values to be pushed to the beginning or end of sorted rows.
+  - New `_features` table option to allow adding new custom internal features to the TanStack Table instance.
+  - fixed `column.getCanGroup` always resolving to `true`
+- Started using the default modal `z-index` value from the MUI theme for the full-screen table dialog to avoid issues with other modals and app bar components.
+- Disabled Edit Save Button when `isSaving` state is `true`
+- Fixed DatePicker Types generic
+
 ### Version 2.12.1 - 2024-02-28
 
 - Fixed `rangeFilterIndex` being undefined in filterProps callback

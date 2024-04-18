@@ -605,15 +605,15 @@ export type MRT_ColumnDef<TData extends MRT_RowData, TValue = unknown> = Omit<
         column: MRT_Column<TData>;
         rangeFilterIndex?: number;
         table: MRT_TableInstance<TData>;
-      }) => DatePickerProps<any>)
-    | DatePickerProps<any>;
+      }) => DatePickerProps<never>)
+    | DatePickerProps<never>;
   muiFilterDateTimePickerProps?:
     | ((props: {
         column: MRT_Column<TData>;
         rangeFilterIndex?: number;
         table: MRT_TableInstance<TData>;
-      }) => DateTimePickerProps<any>)
-    | DateTimePickerProps<any>;
+      }) => DateTimePickerProps<never>)
+    | DateTimePickerProps<never>;
   muiFilterSliderProps?:
     | ((props: {
         column: MRT_Column<TData>;
@@ -632,8 +632,8 @@ export type MRT_ColumnDef<TData extends MRT_RowData, TValue = unknown> = Omit<
         column: MRT_Column<TData>;
         rangeFilterIndex?: number;
         table: MRT_TableInstance<TData>;
-      }) => TimePickerProps<any>)
-    | TimePickerProps<any>;
+      }) => TimePickerProps<never>)
+    | TimePickerProps<never>;
   muiTableBodyCellProps?:
     | ((props: {
         cell: MRT_Cell<TData, TValue>;
@@ -998,15 +998,15 @@ export type MRT_TableOptions<TData extends MRT_RowData> = Omit<
         column: MRT_Column<TData>;
         rangeFilterIndex?: number;
         table: MRT_TableInstance<TData>;
-      }) => DatePickerProps<any>)
-    | DatePickerProps<any>;
+      }) => DatePickerProps<never>)
+    | DatePickerProps<never>;
   muiFilterDateTimePickerProps?:
     | ((props: {
         column: MRT_Column<TData>;
         rangeFilterIndex?: number;
         table: MRT_TableInstance<TData>;
-      }) => DateTimePickerProps<any>)
-    | DateTimePickerProps<any>;
+      }) => DateTimePickerProps<never>)
+    | DateTimePickerProps<never>;
   muiFilterSliderProps?:
     | ((props: {
         column: MRT_Column<TData>;
@@ -1025,8 +1025,8 @@ export type MRT_TableOptions<TData extends MRT_RowData> = Omit<
         column: MRT_Column<TData>;
         rangeFilterIndex?: number;
         table: MRT_TableInstance<TData>;
-      }) => TimePickerProps<any>)
-    | TimePickerProps<any>;
+      }) => TimePickerProps<never>)
+    | TimePickerProps<never>;
   muiLinearProgressProps?:
     | ((props: {
         isTopToolbar: boolean;
