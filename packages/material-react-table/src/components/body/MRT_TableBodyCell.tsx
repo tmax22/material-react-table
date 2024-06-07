@@ -191,6 +191,8 @@ export const MRT_TableBodyCell = <TData extends MRT_RowData>({
   const cellValueProps = {
     cell,
     table,
+    staticColumnIndex,
+    staticRowIndex,
   };
 
   const handleDoubleClick = (event: MouseEvent<HTMLTableCellElement>) => {

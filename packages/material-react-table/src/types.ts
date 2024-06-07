@@ -424,6 +424,8 @@ export type MRT_ColumnDef<TData extends MRT_RowData, TValue = unknown> = Omit<
     column: MRT_Column<TData, TValue>;
     row: MRT_Row<TData>;
     table: MRT_TableInstance<TData>;
+    staticColumnIndex?: number;
+    staticRowIndex?: number;
   }) => ReactNode;
   Cell?: (props: {
     cell: MRT_Cell<TData, TValue>;
@@ -459,6 +461,8 @@ export type MRT_ColumnDef<TData extends MRT_RowData, TValue = unknown> = Omit<
     column: MRT_Column<TData, TValue>;
     row: MRT_Row<TData>;
     table: MRT_TableInstance<TData>;
+    staticColumnIndex?: number;
+    staticRowIndex?: number;
   }) => ReactNode;
   Header?:
     | ((props: {
