@@ -18,11 +18,15 @@ export interface MRT_EditCellTextFieldProps<TData extends MRT_RowData>
   extends TextFieldProps<'standard'> {
   cell: MRT_Cell<TData>;
   table: MRT_TableInstance<TData>;
+  staticColumnIndex?: number;
+  staticRowIndex?: number;
 }
 
 export const MRT_EditCellTextField = <TData extends MRT_RowData>({
   cell,
   table,
+  staticColumnIndex,
+  staticRowIndex,
   ...rest
 }: MRT_EditCellTextFieldProps<TData>) => {
   const {
@@ -100,7 +104,18 @@ export const MRT_EditCellTextField = <TData extends MRT_RowData>({
   };
 
   if (columnDef.Edit) {
-    return <>{columnDef.Edit?.({ cell, column, row, table })}</>;
+    return (
+      <>
+        {columnDef.Edit?.({
+          cell,
+          column,
+          row,
+          table,
+          staticColumnIndex,
+          staticRowIndex,
+        })}
+      </>
+    );
   }
 
   return (
