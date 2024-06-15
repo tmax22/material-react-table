@@ -36,8 +36,11 @@ export const MRT_TableBodyCellValue = <TData extends MRT_RowData>({
   const { globalFilter, globalFilterFn } = getState();
   const filterValue = column.getFilterValue();
 
+  const customIsAggregated =
+    !cell.getIsGrouped() && !cell.getIsPlaceholder() && row.depth === 0;
+
   let renderedCellValue =
-    cell.getIsAggregated() && columnDef.AggregatedCell
+    customIsAggregated && columnDef.AggregatedCell
       ? columnDef.AggregatedCell({
           cell,
           column,
