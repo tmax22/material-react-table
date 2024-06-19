@@ -227,6 +227,9 @@ export const MRT_TableBodyCell = <TData extends MRT_RowData>({
     }
   };
 
+  const customIsAggregated =
+    !cell.getIsGrouped() && !cell.getIsPlaceholder() && row.depth === 0;
+
   return (
     <TableCell
       align={theme.direction === 'rtl' ? 'right' : 'left'}
@@ -317,7 +320,7 @@ export const MRT_TableBodyCell = <TData extends MRT_RowData>({
               staticRowIndex={staticRowIndex}
               staticColumnIndex={staticColumnIndex}
             />
-          ) : showClickToCopyButton && columnDef.enableClickToCopy !== false ? (
+          ) : showClickToCopyButton && columnDef.enableClickToCopy !== false && !customIsAggregated ? (
             <MRT_CopyButton cell={cell} table={table}>
               <MRT_TableBodyCellValue {...cellValueProps} />
             </MRT_CopyButton>
