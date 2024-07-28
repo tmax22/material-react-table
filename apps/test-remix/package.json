@@ -10,11 +10,11 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.4",
-    "@emotion/styled": "^11.11.5",
-    "@mui/icons-material": "^5.16.4",
-    "@mui/material": "^5.16.4",
-    "@mui/x-date-pickers": "^7.10.0",
+    "@emotion/react": "^11.13.0",
+    "@emotion/styled": "^11.13.0",
+    "@mui/icons-material": "^5.16.5",
+    "@mui/material": "^5.16.5",
+    "@mui/x-date-pickers": "^7.11.1",
     "@remix-run/css-bundle": "^2.10.3",
     "@remix-run/node": "^2.10.3",
     "@remix-run/react": "^2.10.3",
@@ -29,8 +29,8 @@
     "@remix-run/eslint-config": "^2.10.3",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "eslint": "^9.7.0",
-    "typescript": "^5.5.3"
+    "eslint": "^9.8.0",
+    "typescript": "^5.5.4"
   },
   "engines": {
     "node": ">=18.0.0"
