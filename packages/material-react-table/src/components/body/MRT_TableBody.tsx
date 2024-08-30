@@ -172,7 +172,7 @@ export const MRT_TableBody = <TData extends MRT_RowData>({
                   rowVirtualizer,
                   staticRowIndex,
                   virtualRow: rowVirtualizer
-                    ? (rowOrVirtualRow as VirtualItem<HTMLTableRowElement>)
+                    ? (rowOrVirtualRow as VirtualItem)
                     : undefined,
                 };
                 const key = `${row.id}-${row.index}`;

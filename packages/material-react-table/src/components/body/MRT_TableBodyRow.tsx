@@ -35,7 +35,7 @@ export interface MRT_TableBodyRowProps<TData extends MRT_RowData>
   rowVirtualizer?: MRT_RowVirtualizer;
   staticRowIndex: number;
   table: MRT_TableInstance<TData>;
-  virtualRow?: VirtualItem<HTMLTableRowElement>;
+  virtualRow?: VirtualItem;
 }
 
 export const MRT_TableBodyRow = <TData extends MRT_RowData>({
