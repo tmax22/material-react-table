@@ -173,7 +173,7 @@ export const TopBar = ({ navOpen, setNavOpen }: Props) => {
                   legacyBehavior
                   href={`https://v3.material-react-table.com/${pathname}`}
                 >
-                  <MenuItem sx={{ m: 0 }} value="v1">
+                  <MenuItem sx={{ m: 0 }} value="v3">
                     V3
                   </MenuItem>
                 </Link>
