@@ -6,9 +6,11 @@ import {
   type MRT_TableOptions,
   MaterialReactTable,
   createRow,
+  MRT_Row,
 } from '../../src';
 import { faker } from '@faker-js/faker';
 import { type Meta } from '@storybook/react';
+import { MenuItem, Select } from '@mui/material';
 
 const meta: Meta = {
   title: 'Features/Creating Examples',
@@ -334,6 +336,68 @@ export const CreateRowIndexIndexExpanding = () => {
         >
           Add
         </Button>
+      )}
+    />
+  );
+};
+
+export const CreateWithCustomEditCell = () => {
+  const [tableData, setTableData] = useState(data);
+
+  const handleSaveRow: MRT_TableOptions<Person>['onEditingRowSave'] = ({
+    exitEditingMode,
+    row,
+    values,
+  }) => {
+    tableData[row.index] = values;
+    setTableData([...tableData]);
+    exitEditingMode();
+  };
+
+  const [creatingRow, setCreatingRow] = useState<MRT_Row<Person> | null>(null);
+
+  return (
+    <MaterialReactTable
+      columns={[
+        {
+          accessorKey: 'firstName',
+          header: 'First Name',
+        },
+        {
+          accessorKey: 'lastName',
+          header: 'Last Name',
+        },
+        {
+          accessorKey: 'address',
+          header: 'Address',
+        },
+        {
+          accessorKey: 'state',
+          header: 'State',
+          Edit: ({ cell }) => (
+            <Select value={cell.getValue<string>()}>
+              <MenuItem value="Alabama">Alabama</MenuItem>
+              <MenuItem value="Alaska">Alaska</MenuItem>
+            </Select>
+          ),
+        },
+        {
+          accessorKey: 'phoneNumber',
+          enableEditing: false,
+          header: 'Phone Number',
+        },
+      ]}
+      state={{ creatingRow }}
+      onCreatingRowChange={setCreatingRow}
+      createDisplayMode="row"
+      data={tableData}
+      editDisplayMode="row"
+      enableEditing={(row) => row.id === creatingRow?.id}
+      onCreatingRowSave={() => {}}
+      onEditingRowSave={handleSaveRow}
+      positionCreatingRow="top"
+      renderTopToolbarCustomActions={({ table }) => (
+        <Button onClick={() => table.setCreatingRow(true)}>Add</Button>
       )}
     />
   );
